@@ -1,0 +1,50 @@
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Наследует цвет текста */
+    outline: none; /* Убирает выделение при нажатии */
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none; /* Убирает подчеркивание для всех состояний */
+    outline: none; /* Убирает выделение для всех состояний */
+}
+
+header, footer{
+    background-color:  #d1e7dd;
+    padding: 10px 0;
+}
+
+h1  {
+    text-align: center
+}
+
+footer{
+    text-color: #adb5bd
+}
+
+ .vertical-table {
+     display: flex;
+     flex-direction: column;
+ }
+ .vertical-table .row {
+     display: flex;
+     flex-direction: row;
+     border: 1px solid #dee2e6;
+ }
+ .vertical-table .row {
+     border-bottom: none;
+ }
+ .vertical-table .row:last-child {
+     border-bottom: 1px solid #dee2e6;
+ }
+ .vertical-table .label {
+     width: 15%;
+     font-weight: bold;
+     background-color: #f8f9fa;
+     padding: 0.75rem;
+     border-right: 1px solid #dee2e6;
+ }
+ .vertical-table .value {
+     width: 70%;
+     padding: 0.75rem;
+ }
