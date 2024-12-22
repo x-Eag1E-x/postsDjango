@@ -7,23 +7,6 @@ def post_list(request):
     sort_by = request.GET.get('sort', 'id')
     search_query = request.GET.get('search', '')
 
-    # if search_query:
-    #     posts = Post.objects.all().order_by('title')
-    #     titles = [post.title for post in posts]
-    #     s_index = binary_search(titles, search_query)
-    #     if s_index != -1:
-    #         s_posts = posts[s_index]
-    #         posts = [s_posts]
-    #     else:
-    #         posts = []
-    # elif sort_by == 'id':
-    #     bubble_sort(posts_list, key=lambda post: post.title.lower())
-    #     posts = Post.objects.all().order_by('id')
-    # elif sort_by == 'title':
-    #     posts = Post.objects.all().order_by('title')
-    # else:
-    #     posts = Post.objects.all()
-
     if search_query:
         posts = Post.objects.all().order_by('title')
         titles = [post.title for post in posts]
@@ -40,10 +23,8 @@ def post_list(request):
 
     if sort_by == 'id':
         bubble_sort(posts_list, key=lambda post: post.id)
-        #posts = Post.objects.all().order_by('id')
     elif sort_by == 'title':
         bubble_sort(posts_list, key=lambda post: post.title.lower())
-        #posts = Post.objects.all().order_by('title')
 
     return render(request, 'posts/post_list.html', {'posts': posts_list, 'sort_by': sort_by, 'search_query': search_query})
 
