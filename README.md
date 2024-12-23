@@ -1,21 +1,33 @@
 # postsDjango
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django)
 
+
 ## Установка
-Установите текущую версию с помощью Pypi
+### Перейдите в репозиторию где буджет развернут проект и инициализируйте новый репозиторий GIT и клонируйте проект с 
+git: 
 ```commandline
-pip install django requests sqlparse tzdata  
+git init
+git clone 'https://github.com/репозиторий.git'
 ```
+### Создание виртуального окружения:
+```commandline
+python3 -m venv venv
+```
+### Активируйте виртуальное окружение:
+```commandline
+source venv/bin/activate
+```
+### Устанавливаем библиотеки из файла [requirements.txt]
+```commandline
+pip install -r requirements.txt
+```
+
 ## Запускаем проект
 Запускаем приложение с директории проекта
 ```commandline
 python manage.py runserver  
 ```
-Заходим в директорию 
-```commandline
- cd my_posts 
-```
-Запускаем команду загрузки [Данных](https://jsonplaceholder.typicode.com/posts)
+## Запускаем команду загрузки [Данных](https://jsonplaceholder.typicode.com/posts)
 ```commandline
 python manage.py parse_data
 ```
