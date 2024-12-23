@@ -13,6 +13,7 @@ class Command(BaseCommand):
 
             data = response.json()
 
+            Post.objects.all().delete()
             for item in data:
                 Post.objects.create(
                     id=item['id'],
